@@ -1,0 +1,16 @@
+{
+    "presets": [
+        [ "@babel/preset-env", 
+        { 
+            "debug" :true,
+            "targets": "> 0.25%, not dead",
+            "useBuiltIns": "usage"
+        }
+         ],
+        ["@babel/preset-react", { "development": true }]
+        ],
+        "plugins": [
+            ["react-hot-loader/babel"],
+            ["@babel/plugin-transform-runtime"]
+          ]
+}
