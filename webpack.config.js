@@ -3,7 +3,7 @@ const webpack = require("webpack");
  const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+
 const commonConfig = require('./webpack.common.config.js');
 
 const prodConfig = {
@@ -56,7 +56,7 @@ const prodConfig = {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    new UglifyJSPlugin()
+   
   ],
 
   mode: "production"
