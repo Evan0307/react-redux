@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.config.js');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 
@@ -67,16 +68,8 @@ const commonConfig = require('./webpack.common.config.js');
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // new MiniCssExtractPlugin({
-    //   // Options similar to the same options in webpackOptions.output
-    //   // both options are optional
-    //   filename: 'css/[name].css',
-    //   chunkFilename: 'css/[id].css',
-    // }),
+    new BundleAnalyzerPlugin()
   ],
-
-  
-
 
   mode: "development"
 };
